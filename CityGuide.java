@@ -1,0 +1,36 @@
+class CityGuide {
+    public static void main(String args[]) {
+        char choice;
+        System.out.println("Select Your Choice");
+        System.out.println("J ---> JAMMU");
+        System.out.println("D ---> DELHI");
+        System.out.println("P ---> PUNJAB");
+        System.out.println("M ---> MUMBAI");
+        System.out.println("-----Choose-----");
+        System.out.flush();
+        try {
+            switch (choice = (char) System.in.read()) {
+                case 'J':
+                case 'j':
+                    System.out.println(" Jammu - Flight no. 742");
+                    break;
+                case 'D':
+                case 'd':
+                    System.out.println(" Delhi - Flight no. 516");
+                    break;
+                case 'P':
+                case 'p':
+                    System.out.println(" Punjab - Flight no. 327");
+                    break;
+                case 'M':
+                case 'm':
+                    System.out.println(" Mumbai - Flight no. 623");
+                    break;
+                default:
+                    System.out.println(" Invalid choice");
+            }
+        } catch (Exception e) {
+            System.out.println("I/O error");
+        }
+    }
+}
